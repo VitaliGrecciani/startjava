@@ -5,12 +5,12 @@ public class ConditionalStatement {
             System.out.println("Возраст больше двадцати");
         }
 
-        boolean itsMale = true;
-        if (itsMale){
+        boolean isMale = true;
+        if (isMale) {
             System.out.println("Мужчина");
         }
 
-        if(!itsMale){
+        if(!isMale) {
             System.out.println("Женщина");
         }
 
@@ -21,10 +21,10 @@ public class ConditionalStatement {
             System.out.println("Рост больше 1.80");
         }
 
-        char firstLetter = 'Z';
-        if (firstLetter == 'М') {
+        char firstNameLetter = 'Z';
+        if (firstNameLetter == 'М') {
             System.out.println("The name probably Michail");
-        } else if (firstLetter == 'И') {
+        } else if (firstNameLetter == 'И') {
             System.out.println("The name probably Ivan");
         } else {
             System.out.println("The name can probably be anything");

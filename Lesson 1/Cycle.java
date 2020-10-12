@@ -6,18 +6,18 @@ public class Cycle {
 
 		int counter = 6; 
 		while (counter >= -6) {
-			System.out.println("Result" + counter);
+			System.out.println("Result " + counter);
 			counter -= 2;
 		}
 
 		counter = 10;
-		int summ = 0;
+		int sum = 0;
 		do {
 			if (counter % 2 != 0) {
-				summ += counter;
+				sum += counter;
 			}
 			counter++;
 		} while(counter != 20);
-		System.out.println("Sum = " + summ);
+		System.out.println("Sum = " + sum);
 	}
 }

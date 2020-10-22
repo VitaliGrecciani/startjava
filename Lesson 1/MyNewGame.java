@@ -1,5 +1,4 @@
 public class MyNewGame {
-
     public static void main(String[] args) {
         int correctNumber = 13;
         int inputNumber = 50;

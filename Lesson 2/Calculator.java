@@ -15,7 +15,7 @@ public class Calculator {
         return num2;
     }
     
-    public void setNum2(int num2){
+    public void setNum2(int num2) {
         this.num2 = num2;
     }
     
@@ -27,4 +27,32 @@ public class Calculator {
         this.operation = operation;
     }
     
-    
+    public void calculate() {
+        switch (operation) {
+            case '+':
+                System.out.println(num1 + num2);
+                break;
+            case '-':
+                System.out.println(num1 - num2);
+                break;
+            case '*':
+                System.out.println(num1 * num2);
+                break;
+            case '/':
+                System.out.println(num1 / num2);
+                break;
+            case '%':
+                System.out.println(num1 % num2);
+                break;
+            case '^':
+                int result = 1;
+                for(int i = 1; i < num2; i++) {
+                   result *= num1;
+                }
+                System.out.println(result);
+                break;
+            default:
+                    System.out.println("");
+        }
+    }
+}

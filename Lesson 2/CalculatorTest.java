@@ -7,14 +7,14 @@ public class CalculatorTest {
         char replic;
         
         do {
-                System.out.print("Введите первое число: ");
+                System.out.print("Введите первое число:");
                 casio.setNum1(sc.nextInt());
                 sc.nextLine();
 
-                System.out.print("Введите знак математической операции: ");
+                System.out.print("Введите знак математической операции:");
                 casio.setOperation(sc.nextLine().charAt(0));
                 
-                System.out.print("Введите второе число: ");
+                System.out.print("Введите второе число:");
                 casio.setNum2(sc.nextInt());
                 sc.nextLine();
                 casio.calculate();

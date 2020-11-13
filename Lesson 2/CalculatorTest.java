@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class CalculatorTest {
     public static void main(String[] args) {
         Calculator casio = new Calculator();
-        Scanner sc = new Scanner (System.in);
-        char replic;
+        Scanner sc = new Scanner(System.in);
+        char repeat;
         
         do {
                 System.out.print("Введите первое число:");
@@ -21,9 +21,9 @@ public class CalculatorTest {
                 
                 do {
                         System.out.println("Хотите продолжить? [д/н]:");
-                        replic = sc.next(".").charAt(0);
-                } while (replic != 'д' && replic != 'н');
-        } while (replic != 'н');
+                        repeat = sc.next().charAt(0);
+                } while (repeat != 'д' && repeat != 'н');
+        } while (repeat != 'н');
     }
 }
 

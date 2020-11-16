@@ -1,30 +1,12 @@
 public class JaegerTest {
 
     public static void main(String[] args) {
-        Jaeger jaegerOne = new Jaeger();
-        jaegerOne.setModelName("Striker Eureka");
-        jaegerOne.setMark("Mark-5");
-        jaegerOne.setOrigin("Australia");
-        jaegerOne.setEquipment("TY/Escape Hatch");
-        jaegerOne.setEnergyCore("XIG Supercell Chamber");
-        jaegerOne.setHeight(76.2f);
-        jaegerOne.setWeight(1.850f);
-        jaegerOne.setSpeed(10);
-        jaegerOne.setArmor(9);
+        Jaeger jaegerOne = new Jaeger("Striker Eureka", "Mark-5", "Australia", "TY/Escape Hatch", "XIG Supercell Chamber", 76.2f, 1.850f, 10, 9);
         System.out.println(jaegerOne);
         jaegerOne.drift();
         jaegerOne.move();
 
-        Jaeger jaegerTwo = new Jaeger();
-        jaegerTwo.setModelName("Crimson Typhoon");
-        jaegerTwo.setMark("Mark-4");
-        jaegerTwo.setOrigin("China");
-        jaegerTwo.setEquipment("Piston");
-        jaegerTwo.setEnergyCore("Midnight Orb 9");
-        jaegerTwo.setHeight(76.2f);
-        jaegerTwo.setWeight(1.722f);
-        jaegerTwo.setSpeed(9);
-        jaegerTwo.setArmor(6);
+        Jaeger jaegerTwo = new Jaeger("Crimson Typhoon", "Mark-4", "China", "Piston", "Midnight Orb 9", 76.2f, 1.722f, 9, 6);
         System.out.println(jaegerTwo);
         jaegerTwo.drift();
         jaegerTwo.move();

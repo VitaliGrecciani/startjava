@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class GuessNumber {
     private int tapNumber;
@@ -20,22 +21,27 @@ public class GuessNumber {
             player1.setGuessNumber(scan.nextInt());
             scan.nextLine();
             tapNumber(player1);
-            if (win) {
+            if(win) {
                 System.out.print(player2.getName() + ", введите число: ");
                 player2.setGuessNumber(scan.nextInt());
                 tapNumber(player2);
             }
-        } while (win);
+        } while(win);
     }
-    
-    private void tapNumber(Player player) {
+
+    private boolean tapNumber(Player player) {
         if (player.getGuessNumber() > tapNumber) {
             System.out.println("Введенное число больше того, что загадал компьютер (" + tapNumber +")");
+        return true;
         } else if (player.getGuessNumber() < tapNumber) {
             System.out.println("Введенное число меньше того, что загадал компьютер (" + tapNumber +")");
-        } else {
+        return true;
+        } else if (player.getGuessNumber() == tapNumber) {
             System.out.println(player.getName() + ", Вы угадали. " + player.getGuessNumber());
             win = false;
-        }
+        } return false;
     }
 }
+
+
+

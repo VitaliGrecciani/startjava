@@ -8,24 +8,6 @@ public class GuessNumberTest {
         System.out.println("Игрок 2: ");
         Player player2 = new Player(scan.nextLine());
         GuessNumber game = new GuessNumber(player1, player2);
-        String answer;
- /*       
-        do {
-            game.play();
-            do {
-                System.out.print("Хотите продолжить? [да/нет]: ");
-                    answer = scan.nextLine();
-            } while (answer != "Да" && answer != "Нет");
-        } while (answer != "Нет");
-    }
-}
-*/
-       do {
-            game.play();
-            do {
-                System.out.print("Хотите продолжить? [да/нет]: ");
-                answer = scan.nextLine();
-            } while (!answer.equals("нет") && !answer.equals("да"));
-        } while (!answer.equals("нет"));
-    }
+        game.play();
+   }
 }

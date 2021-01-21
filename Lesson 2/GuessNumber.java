@@ -27,7 +27,7 @@ public class GuessNumber {
                 if (checkNumber) {
                     enterNumber(player2);
                     System.out.print(player2.getName() + ":");
-                    checkNumber(player);
+                    checkNumber(player2);
             }
         } while(true);
     }

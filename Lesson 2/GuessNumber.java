@@ -3,7 +3,6 @@ import java.lang.Math;
 
 public class GuessNumber {
     private int randomNumber;
-    private boolean win;
     private Player player1;
     private Player player2;
     private Scanner scan = new Scanner(System.in);
@@ -14,32 +13,35 @@ public class GuessNumber {
     }
 
     public void play() {
-            win = true;
             randomNumber = (int) (Math.random() * 101);
             System.out.println("Угадай число !");
             do {
                 enterNumber(player1);
-                compareNumber(player1);
-                if (win) {
-                    enterNumber(player2);
-                    compareNumber(player2);
+                if (compareNumber(player1)) {
+                    break;
             }
-        } while(win);
+                enterNumber(player2);
+                if (compareNumber(player2)) {
+                    break;
+            }
+        } while(true);
     }
 
-    public void enterNumber(Player player) {
+    private void enterNumber(Player player) {
         System.out.print(player.getName() + ", введите число: ");
         player.setGuessNumber(scan.nextInt());
     }
 
-    private void compareNumber(Player player) {
-            if (player.getGuessNumber() == randomNumber) {
-                System.out.println (" Вы угадали! " + player.getGuessNumber());
-               win = false; 
-            } else if (player.getGuessNumber() > randomNumber) {
-                System.out.println(" введенное число больше того, что загадал компьютер " + randomNumber );
-            } else if (player.getGuessNumber() < randomNumber) {
-                System.out.println(" введенное число меньше того, что загадал компьютер " + randomNumber );
-            }
-        } 
+    private boolean compareNumber(Player player) {
+        if (player.getGuessNumber() != 101) {
+            if (player.getGuessNumber() > randomNumber) {
+            System.out.println(" введенное число больше того, что загадал компьютер " + randomNumber );
+        } else if (player.getGuessNumber() < randomNumber) {
+            System.out.println(" введенное число меньше того, что загадал компьютер " + randomNumber );
+        } else { 
+            System.out.println (" Вы угадали! " + player.getGuessNumber());
+            return true;
+            } 
+        } return false;
     }
+}

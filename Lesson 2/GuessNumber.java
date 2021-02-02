@@ -13,16 +13,16 @@ public class GuessNumber {
     }
 
     public void play() {
-            randomNumber = (int) (Math.random() * 101);
-            System.out.println("Угадай число !");
-            do {
-                enterNumber(player1);
-                if (compareNumber(player1)) {
-                    break;
+        randomNumber = (int) (Math.random() * 101);
+        System.out.println("Угадай число !");
+        do {
+            enterNumber(player1);
+            if (compareNumber(player1)) {
+                break;
             }
-                enterNumber(player2);
-                if (compareNumber(player2)) {
-                    break;
+            enterNumber(player2);
+            if (compareNumber(player2)) {
+                break;
             }
         } while(true);
     }

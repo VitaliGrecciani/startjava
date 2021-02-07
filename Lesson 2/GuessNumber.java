@@ -33,15 +33,13 @@ public class GuessNumber {
     }
 
     private boolean compareNumber(Player player) {
-        if (player.getGuessNumber() != 101) {
-            if (player.getGuessNumber() > randomNumber) {
+        if (player.getGuessNumber() > randomNumber) {
             System.out.println(" введенное число больше того, что загадал компьютер " + randomNumber );
         } else if (player.getGuessNumber() < randomNumber) {
             System.out.println(" введенное число меньше того, что загадал компьютер " + randomNumber );
         } else { 
             System.out.println (" Вы угадали! " + player.getGuessNumber());
             return true;
-            } 
         } return false;
-    }
+    } 
 }

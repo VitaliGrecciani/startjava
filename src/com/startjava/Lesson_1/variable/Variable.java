@@ -1,3 +1,6 @@
+package com.startjava.lesson_1.variable;
+
+
 public class Variable { 
     public static void main(String[] args) {
         byte cpuSize = 4;

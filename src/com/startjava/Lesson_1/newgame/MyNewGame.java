@@ -1,3 +1,5 @@
+package com.startjava.lesson_1.newgame;
+
 public class MyNewGame {
     public static void main(String[] args) {
         int correctNumber = 13;

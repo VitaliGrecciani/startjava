@@ -18,6 +18,7 @@ public class GuessNumber {
     public void play() {
         randomNumber = (int) (Math.random() * 101);
         System.out.println("Угадай число !");
+        System.out.println("У вас 10 попыток");
         do {
             enterNumber(player1);
             if (compareNumber(player1)) {

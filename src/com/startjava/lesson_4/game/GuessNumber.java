@@ -20,11 +20,9 @@ public class GuessNumber {
         System.out.println("У вас 10 попыток");
         for (int stepNumber = 1; stepNumber <= 10; stepNumber++) {
             player1.setCountOfAttempts(stepNumber);
-//            enterNumber(player1);
             if (!endAttempts(player1)) {
                 break;
             }
-//            enterNumber(player2);
             player2.setCountOfAttempts(stepNumber);
             if (!endAttempts(player2)) {
                 break;
